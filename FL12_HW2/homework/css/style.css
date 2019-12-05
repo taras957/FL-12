@@ -1,0 +1,27 @@
+.tm-nav-item a:hover {
+    background-color: lightskyblue;
+    color: #fff;
+}
+
+
+/* //скільки пікселів бордер???? */
+
+.tm-banner-inner {
+    border: 25px solid transparent;
+    border-image: linear-gradient(to right, lightskyblue, burlywood) 1;
+}
+
+.tm-banner-text {
+    text-shadow: 5px 5px 3px #333;
+    animation: slide;
+    animation-duration: 3s;
+}
+
+@keyframes slide {
+    from {
+        margin-left: 200px;
+    }
+    to {
+        margin-left: 0;
+    }
+}
