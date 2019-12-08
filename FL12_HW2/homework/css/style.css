@@ -48,7 +48,6 @@
         line-height: 30px;
         text-indent: 25px;
         text-align: left;
-        /* vertical-align: middle; */
     }
     
     .box-bg:hover {
@@ -59,7 +58,6 @@
     
     section {
         position: relative;
-        text-align: left;
     }
     
     section::before {
@@ -162,4 +160,73 @@
         border: 1px solid lightskyblue;
         display: block;
         margin-left: auto;
+    }
+    
+    @media print {
+        .tm-section-title {
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+        .container {
+            background-color: #fff;
+        }
+        .tm-sidebar,
+        .tm-team-img,
+        #about,
+        section::before,
+        .gallery-container,
+        #ideas+.tm-content-box,
+        .carousel-indicators {
+            display: none;
+        }
+        .tm-banner-inner {
+            margin: 0 auto;
+            width: 95%;
+            border: 1px solid grey;
+        }
+        .tm-banner {
+            padding-bottom: 20px;
+        }
+        .tm-banner-text {
+            text-align: center;
+            animation: none;
+            color: #333;
+        }
+        .heading ol {
+            list-style: none;
+            display: inline-block;
+            width: 390px;
+            text-align: center;
+        }
+        .heading li:nth-child(even) {
+            text-align: left;
+        }
+        .heading li:nth-child(odd) {
+            text-align: right;
+        }
+        .tm-section-description {
+            width: 100%;
+            text-indent: 0;
+            text-align: center;
+            letter-spacing: 0.8px;
+        }
+        .tm-team-description-container {
+            max-width: 100%;
+        }
+        .tm-content-box {
+            margin-bottom: 0;
+        }
+        .heading .padding-medium {
+            text-align: center;
+        }
+        .blocks .tm-section-title {
+            text-align: center;
+        }
+        .tm-main-content,
+        .tm-footer,
+        .padding-medium,
+        .carousel,
+        body {
+            padding: 0;
+        }
     }
