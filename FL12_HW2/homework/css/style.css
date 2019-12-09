@@ -90,7 +90,7 @@
         font-weight: bold;
     }
     
-    .heading li:nth-child(-2n+3):hover::after {
+    .heading li:nth-child(-2n+3)::after {
         content: "New";
         color: red;
         vertical-align: top;
@@ -170,6 +170,9 @@
         .container {
             background-color: #fff;
         }
+        .heading li:nth-child(-2n+3)::after {
+            display: none;
+        }
         .tm-sidebar,
         .tm-team-img,
         #about,
@@ -189,7 +192,6 @@
         }
         .tm-banner-text {
             text-align: center;
-            animation: none;
             color: #333;
         }
         .heading ol {
