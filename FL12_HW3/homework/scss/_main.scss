@@ -32,6 +32,14 @@
     z-index: -1;
 }
 
+@each $name,
+$scale in $imgScale {
+    .section_card:nth-child(#{$name})>.section_card_img {
+        width:#{$scale};
+        border-radius: 5px;
+    }
+}
+
 .flex-column {
     display: flex;
     flex-direction: column;
@@ -156,27 +164,6 @@ header {
         display: block;
         text-align: center;
     }
-}
-
-$imgScale: ( "1": "45%", "2": "43%", "3": "52%");
-@each $name,
-$scale in $imgScale {
-    .section_card_img {
-        width: $scale;
-    }
-}
-
-.section_card>.section_card_img {
-    width: 45%;
-    border-radius: 5px;
-}
-
-.section_card:nth-child(2)>.section_card_img {
-    width: 43%;
-}
-
-.section_card:nth-child(3)>.section_card_img {
-    width: 52%;
 }
 
 .section_card:nth-child(3) {
