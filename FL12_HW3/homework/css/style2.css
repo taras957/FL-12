@@ -5,6 +5,10 @@
   margin: 0;
   padding: 0; }
 
+.flex-column, .section_card_wrap, .section_card .section_card_right_container {
+  display: flex;
+  flex-direction: column; }
+
 body {
   background-color: #1c1e2a; }
 
@@ -50,8 +54,6 @@ header {
     height: 50px;
     width: 295px;
     background-color: #ff4d30;
-    bottom: 5px;
-    left: 0;
     z-index: -1;
     bottom: 5px;
     left: 0;
@@ -60,7 +62,6 @@ header {
 .header_text {
   font-family: "Hind", sans-serif;
   color: #fff;
-  width: 660px;
   margin-bottom: 52px;
   white-space: pre-line; }
 
@@ -90,8 +91,6 @@ header {
   margin-bottom: 35px; }
 
 .section_card_wrap {
-  display: flex;
-  flex-flow: column;
   align-items: center; }
 
 .section_card {
@@ -119,14 +118,21 @@ header {
     margin-left: 86px;
     min-height: 200px;
     height: 100%;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between; }
   .section_card .section_link {
     font-family: "Source Sans Pro", sans-serif;
     color: #fff;
     display: block;
     text-align: center; }
+
+.section_card_img {
+  width: "45%"; }
+
+.section_card_img {
+  width: "43%"; }
+
+.section_card_img {
+  width: "52%"; }
 
 .section_card > .section_card_img {
   width: 45%;
@@ -144,12 +150,11 @@ header {
     margin-top: 28px; }
   .section_card:nth-child(3) .section_card_right_container .section_card_text {
     font-family: "Hind", sans-serif;
-    margin-top: 37PX; }
+    margin-top: 37px; }
   .section_card:nth-child(3) .section_card_right_container .section_link {
     margin-top: 3px; }
 
 .section_text {
-  color: #fff;
   position: relative;
   z-index: 2; }
   .section_text::after {
@@ -158,6 +163,7 @@ header {
     height: 50px;
     width: 190px;
     background-color: #ff4d30;
+    z-index: -1;
     bottom: 5px;
     right: 765px;
     z-index: -1; }
@@ -189,8 +195,6 @@ header {
     height: 50px;
     width: 64px;
     background-color: #ff4d30;
-    bottom: 5px;
-    left: 0;
     z-index: -1;
     left: 122px; }
 
@@ -213,14 +217,17 @@ header {
   right: 159px;
   bottom: 48px; }
 
+footer {
+  background-color: #21232e; }
+
 .footer-wrap {
+  width: 1540px;
   margin: 0 auto;
   margin-top: 210px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 310px;
-  background-color: #21232e; }
+  min-height: 310px; }
 
 .landing-logo,
 .footer_text,
