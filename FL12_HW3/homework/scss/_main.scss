@@ -122,6 +122,15 @@ header {
     font-weight: 700;
     margin-top: 40px;
     margin-bottom: 35px;
+    color: $fontColor;
+    position: relative;
+    z-index: 2;
+    &::after {
+        @include marker(50px, 190px, $markColor);
+        bottom: 5px;
+        right: 765px;
+        z-index: -1;
+    }
 }
 
 .section_card_wrap {
@@ -182,17 +191,6 @@ header {
     }
 }
 
-.section_text {
-    position: relative;
-    z-index: 2;
-    &::after {
-        @include marker(50px, 190px, $markColor);
-        bottom: 5px;
-        right: 765px;
-        z-index: -1;
-    }
-}
-
 .section_banner {
     position: absolute;
     left: 50%;
@@ -216,6 +214,7 @@ header {
     font-weight: 700;
     position: relative;
     z-index: 2;
+    color: $fontColor;
     &::after {
         @include marker(50px, 64px, $markColor);
         left: 122px;

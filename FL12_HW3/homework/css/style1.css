@@ -100,7 +100,20 @@ header {
   font-size: 41px;
   font-weight: 700;
   margin-top: 40px;
-  margin-bottom: 35px; }
+  margin-bottom: 35px;
+  color: #000;
+  position: relative;
+  z-index: 2; }
+  .section_text::after {
+    content: " ";
+    position: absolute;
+    height: 50px;
+    width: 190px;
+    background-color: #14a0c7;
+    z-index: -1;
+    bottom: 5px;
+    right: 765px;
+    z-index: -1; }
 
 .section_card_wrap {
   align-items: center; }
@@ -147,20 +160,6 @@ header {
   .section_card:nth-child(3) .section_card_right_container .section_link {
     margin-top: 3px; }
 
-.section_text {
-  position: relative;
-  z-index: 2; }
-  .section_text::after {
-    content: " ";
-    position: absolute;
-    height: 50px;
-    width: 190px;
-    background-color: #14a0c7;
-    z-index: -1;
-    bottom: 5px;
-    right: 765px;
-    z-index: -1; }
-
 .section_banner {
   position: absolute;
   left: 50%;
@@ -181,7 +180,8 @@ header {
   font-size: 30px;
   font-weight: 700;
   position: relative;
-  z-index: 2; }
+  z-index: 2;
+  color: #000; }
   .section_banner_heading::after {
     content: " ";
     position: absolute;
