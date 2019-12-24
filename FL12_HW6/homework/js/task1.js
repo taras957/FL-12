@@ -18,7 +18,7 @@ while (validFlag) {
     if (d < 0) {
         alert('There is no solution')
     } else if (d === 0) {
-        x = -b / devidedBy2 * a;
+        let x = -b / devidedBy2 * a;
         alert(`X = ${x}`);
     } else {
         let x1 = Math.round((-b + Math.sqrt(d)) / devidedBy2 * a);
