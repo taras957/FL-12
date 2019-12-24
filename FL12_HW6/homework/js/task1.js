@@ -2,9 +2,9 @@
 let discrimCoef = 4;
 let toPow = 2;
 let devidedBy2 = 2;
-let a = prompt('input number a');
-let b = prompt('input number b');
-let c = prompt('input number c');
+let a = prompt('input coefficient A');
+let b = prompt('input coefficient B');
+let c = prompt('input coefficient C');
 let validFlag = true;
 
 if (isNaN(a) && !isFinite(a) || isNaN(b) && !isFinite(b) || isNaN(c) && !isFinite(c)) {
