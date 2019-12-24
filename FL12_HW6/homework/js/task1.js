@@ -16,9 +16,8 @@ while (!a) {
     } else {
         break;
     }
-
-
 }
+
 while (!b) {
     b = +prompt('input number b', 1);
     if (isNaN(parseFloat(b)) && !isFinite(b)) {
@@ -26,8 +25,8 @@ while (!b) {
     } else {
         break;
     }
-
 }
+
 while (!c) {
     c = +prompt('input number c', 1);
     if (isNaN(parseFloat(c)) && !isFinite(c)) {
@@ -35,8 +34,8 @@ while (!c) {
     } else {
         break;
     }
-
 }
+
 let d = Math.pow(b, toPow) - discrimCoef * a * c;
 console.log(d);
 
