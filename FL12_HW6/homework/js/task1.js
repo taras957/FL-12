@@ -13,7 +13,6 @@ if (isNaN(a) && !isFinite(a) || isNaN(b) && !isFinite(b) || isNaN(c) && !isFinit
 }
 while (validFlag) {
     let d = Math.pow(b, toPow) - discrimCoef * a * c;
-    console.log(d);
 
     if (d < 0) {
         alert('There is no solution')
