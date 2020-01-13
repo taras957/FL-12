@@ -19,7 +19,8 @@ function executeforEach(arr, cb) {
 }
 
 executeforEach([1, 2, 3, 4, 5], function(el) {
-console.log(el * 2)
+    let myltBy = 2;
+console.log(el * myltBy);
 });
 
 function mapArray(arr, cb) {
@@ -33,7 +34,8 @@ function mapArray(arr, cb) {
 }
 
   mapArray([2, '5', 8], function(el) {
-    return el + 3;
+      let sumN =3;
+    return el + sumN;
   });
 
 
@@ -47,7 +49,8 @@ function filterArray(arr, cb) {
 } 
 
   filterArray([2, 5, 8], function(el) {
-    return el % 2 === 0;
+      let evenNumb = 2;
+    return el % evenNumb === 0;
   })
 
 
@@ -89,10 +92,10 @@ getArrayOfKeys(actors, 'name');
 function substitute(arr) {
   return mapArray(arr, f);
   function f(n) {
-    if (n < 30) {
-     
-       n = '*';
-        return n;
+      let conditionNumb = 30;
+    if (n < conditionNumb) {
+      n = '*';
+      return n;
     }
     return n;
   }
@@ -118,7 +121,8 @@ function getPastDay(date, dayAgo) {
   let initDate = new Date(date);
   let res = new Date(initDate - dayAgo * 8.64e7);
   let day = res.getDate();
-  if (day < 9) {
+  let twoDigitHour = 9;
+  if (day <= twoDigitHour) {
     day = '0' + day;
   }
   return `${day} ${MONTHES[res.getMonth()]} ${res.getFullYear()}`;
@@ -128,10 +132,16 @@ getPastDay(date, 2);
 
 function formatDate (date) {
     let hours = date.getHours();
-    if (hours <= 9) {
-       hours = '0' + hours;
+    let twoDigitHour = 9;
+    let minutes =
+      date.getMinutes() <= twoDigitHour
+        ? '0' + date.getMinutes()
+        : date.getMinutes();
+    if (hours <= twoDigitHour) {
+      hours = '0' + hours;
     }
- return `${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()} ${hours}:${date.getMinutes()}`
+ return `${date.getFullYear()}/${date.getMonth() +
+   1}/${date.getDate()} ${hours}:${minutes}`;
 }
 
 formatDate(new Date('6/15/2018 09:15:00'));
