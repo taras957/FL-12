@@ -7,7 +7,7 @@ const Fighter = function(options) {
   let totalWin = 0;
   let totalLosses = 0;
   let currentHealth = hp;
-  let maxRangeofSuccess = 100;
+
 
   class Fighter {
     getName() {
@@ -51,12 +51,15 @@ const Fighter = function(options) {
       currentHealth = delHp;
       return currentHealth;
     }
-    attack(obj) {
-      let procentOfSuccess = obj.getAgility() + obj.getStrength();
-      let randomProcent = Math.floor(Math.random() * maxRangeofSuccess - 1) + 1;
+    attack(secondFighter) {
+      const MAX_RANGE_OF_SUCCESS = 100;
+      let procentOfSuccess =
+        secondFighter.getAgility() + secondFighter.getStrength();
+      let randomProcent =
+        Math.floor(Math.random() * MAX_RANGE_OF_SUCCESS - 1) + 1;
       if (procentOfSuccess > randomProcent) {
-        obj.dealDamage(damage);
-        console.log(`${name} makes ${damage} to ${obj.getName()}`);
+        secondFighter.dealDamage(damage);
+        console.log(`${name} makes ${damage} to ${secondFighter.getName()}`);
       } else {
         console.log(`${name} attack missed`);
       }
@@ -77,9 +80,9 @@ const myFighter = new Fighter({
 const myFighter2 = new Fighter({
   name: 'Gordeus',
   damage: 85,
-  hp: 50 ,
+  hp: 60 ,
   strength: 70,
-  agility: 15
+  agility: 25
 });
 function buttle(fighter1, fighter2) {
   if (!fighter1.getHealth()) {
@@ -91,8 +94,15 @@ function buttle(fighter1, fighter2) {
   }
 
   while (fighter1.getHealth() > 0 && fighter2.getHealth() > 0) {
+      
     fighter1.attack(fighter2);
+    if (!fighter2.getHealth()) {
+      break;
+    }
     fighter2.attack(fighter1);
+    if (!fighter1.getHealth() > 0) {
+      break;
+    }
   }
   if (fighter1.getHealth()) {
     fighter1.addWin();
