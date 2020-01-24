@@ -1,0 +1,34 @@
+/* Todo: your styles go here*/
+
+
+/* li{
+    height: 18px;
+} */
+.folder,
+.file{
+    cursor: pointer;
+}
+.material-icons{
+    font-size: 16px;
+    vertical-align: bottom;
+
+}
+span{
+    display: block;
+    width: 100%;
+}
+span:hover{
+    
+    background-color: lightgrey;
+    height: fit-content;
+}
+.folder> span>i {
+    color: darkgoldenrod;
+}
+.file>span>i{
+    color: darkgrey;
+}
+ul{
+    list-style: none;
+    padding-left: 10px;  
+}
