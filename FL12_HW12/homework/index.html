@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Homework 12 - Simple TODO List</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+  <link rel="" href="newPage.html">
+</head>
+<body>
+  <div id="root">
+    <section id="main-page">
+      <header><h1 class="title">List of Sets</h1>
+      <a class="add-new-set" href="#/add_new-set-page">Add new set</a class="add-new-set"></header>
+        <div class="sets">
+        </div>
+    </section>
+
+  <section  class="addSet" id="#/add_new-set-page">
+    <div class="set">
+      <div class="set-top">
+        <label for="name" class="label">Name</label>
+        <input type="text" id='name' placeholder="">
+        <div class="tooltip">
+          <span>Please fill this field in</span>
+        </div>
+        <button class="add-terms">Add terms</button>
+      </div>
+      <div class="set-main">
+        <div class="terms">
+          <input id="term" type="text" placeholder="Enter term">
+          <input id="descr" type="text" placeholder="Enter description">
+          <button class="remove">remove</button>
+        </div>
+        <div class="control-buttons">
+          <button data-save='true'>Save</button>
+          <button data-save='false'>Cancel</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <section class="modify" id="#/modify:item/id-modPage">
+    <h1>modify test page</h1>
+    <div class="modify-fields">
+      <input type="text" placeholder="name" class="modify-name">
+      <input type="text" placeholder="term" class="modify-term">
+      <input type="text" placeholder="definition" class="modify-def">
+    </div>
+    <div class="modify-buttons">
+    <button data-save="true">Save Changes</button>
+    <button data-save="false">Cancel</button>
+    </div>
+  </section>
+  
+  <script src="./src/app.js"></script>
+</body>
+
+</html>
