@@ -1,0 +1,60 @@
+/* Your styles go here */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+/* #new-set-page { */
+    /* display: none; */
+/* } */
+.set {
+    width: 300px;
+    margin: 0 auto;
+
+}
+.set-top {
+    margin: 0 auto;
+    width: fit-content;
+    position: relative;
+}
+#name {
+    width: 150px;
+    margin-bottom: 40px;
+}
+.add-terms {
+    width: 100px;
+}
+.label{
+    display: block;
+}
+#term,
+#descr{
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 30px;
+}
+.remove{
+    display: block;
+    margin: 0 auto;
+}
+.control-buttons{
+    display: flex;
+    justify-content: space-around;
+}
+.set-main {
+    display: none;
+}
+.tooltip {
+    display: none;
+    top: 40px;
+    position: absolute;
+    color: red;
+    border-radius: 5px;
+}
+.addSet {
+    display: none;
+}
+.modify {
+    display: none;
+}
