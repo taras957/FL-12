@@ -7,11 +7,16 @@ header{
 /* #new-set-page { */
     /* display: none; */
 /* } */
-.set {
-    width: 300px;
-    margin: 0 auto;
+#sets {
+    text-align: center;
 
 }
+.term-item {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
 .set-top {
     margin: 0 auto;
     width: fit-content;
@@ -27,21 +32,18 @@ header{
 .label{
     display: block;
 }
-#term,
+/* #term,
 #descr{
     width: 200px;
     margin: 0 auto;
     display: block;
     margin-bottom: 30px;
-}
+} */
 .remove{
     display: block;
     margin: 0 auto;
 }
-.control-buttons{
-    display: flex;
-    justify-content: space-around;
-}
+
 .set-main {
     display: none;
 }
@@ -53,8 +55,16 @@ header{
     border-radius: 5px;
 }
 .addSet {
+    /* margin-top: 300px; */
     display: none;
 }
 .modify {
     display: none;
+}
+.addMoreFields {
+    display: block;
+    margin: 0 auto;
+}
+.learned {
+    text-decoration: line-through;
 }
